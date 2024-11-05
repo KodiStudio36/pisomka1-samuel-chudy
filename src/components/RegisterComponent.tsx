@@ -25,7 +25,7 @@ export default function RegisterComponent() {
       }}
     >
       <Typography variant="h4" gutterBottom>
-        Register
+        Login
       </Typography>
       <Button
         variant="contained"
@@ -34,7 +34,7 @@ export default function RegisterComponent() {
         onClick={handleGoogleSignIn}
         sx={{ mt: 2 }}
       >
-        Register with Google
+        Login with Google
       </Button>
     </Box>
   );

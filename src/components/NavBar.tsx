@@ -29,7 +29,7 @@ export default function SidebarMenu() {
 
   const handleAuthAction = () => {
     if (!session) {
-      router.push('/auth/prihlasenie');
+      router.push('/auth/registracia');
     } else {
       signOut({ callbackUrl: '/' });
     }
@@ -62,13 +62,6 @@ export default function SidebarMenu() {
             <ListItemText primary="Domov" />
           </ListItem>
 
-          <ListItem button onClick={() => handleNavigation('/pridat')}>
-            <ListItemIcon>
-              <AddCircleIcon />
-            </ListItemIcon>
-            <ListItemText primary="Pridať" />
-          </ListItem>
-
           {/* Conditional Menu Items based on Session */}
           {!session ? (
             <>
@@ -77,13 +70,6 @@ export default function SidebarMenu() {
                   <AppRegistrationIcon />
                 </ListItemIcon>
                 <ListItemText primary="Registrovať" />
-              </ListItem>
-
-              <ListItem button onClick={handleAuthAction}>
-                <ListItemIcon>
-                  <LoginIcon />
-                </ListItemIcon>
-                <ListItemText primary="Prihlásiť sa" />
               </ListItem>
             </>
           ) : (

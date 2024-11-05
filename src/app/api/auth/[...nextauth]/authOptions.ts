@@ -14,7 +14,7 @@ export const authOptions: NextAuthOptions = {
   debug: true,
   secret: process.env.NEXTAUTH_SECRET,
   pages: {
-    signIn: '/auth/prihlasenie',
+    signIn: '/auth/registracia',
     signOut: '/auth/odhlasenie',
   },
   callbacks: {
